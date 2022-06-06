@@ -13,18 +13,20 @@ func _ready():
 	
 func take_damage(dmg_amount):
 	health -= dmg_amount
-	if health <=0:
+	if health <= 0:
 		death()
 	
 func _physics_process(delta):
+
 	if path_index < path.size():
 		var direction = (path[path_index] - global_transform.origin)
+		print(direction.length())
 		if direction.length() < 1:
+			
 			path_index += 1
 		else:
-			move_and_slide(direction.normalized() * speed, Vector3.UP)
-	else:
-		find_path(player.global_transform.origin)
+			move_and_slide(direction.normalized() * speed, Vector3.UP)	
+		
 
 	
 func find_path(target):
@@ -39,3 +41,7 @@ func death():
 	
 func shoot(target):
 	pass
+
+
+func _on_Timer_timeout():
+	find_path(player.global_transform.origin)
