@@ -5,7 +5,7 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 
 var path = [] #hold the path coordinates from the enemy to the player
 var path_index = 0
-var speed = 20
+var speed = 5
 var health = 20
 
 func _ready():

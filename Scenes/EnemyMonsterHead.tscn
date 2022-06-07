@@ -23,6 +23,11 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "die",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 4 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "hit",
@@ -37,11 +42,6 @@ animations = [ {
 "loop": true,
 "name": "shoot",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "die",
-"speed": 5.0
 } ]
 
 [node name="EnemyMonsterHead" type="KinematicBody" groups=["Enemy"]]
@@ -49,19 +49,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.016746, 0 )
 script = ExtResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 2.5, 0, 0, 0, -1.09278e-07, -2, 0, 2.5, -8.74228e-08, 0, 1.86864, 0 )
+transform = Transform( 2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 1.86864, 0 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, -0.122478, 0 )
+transform = Transform( 2, 0, 0, 0, 4, 0, 0, 0, 2, 0.025075, -0.0820608, -0.0230827 )
 centered = false
 offset = Vector2( -25, 0 )
 pixel_size = 0.0192
 billboard = 2
 frames = SubResource( 2 )
 animation = "walk"
-frame = 1
+frame = 3
 playing = true
+__meta__ = {
+"_editor_description_": "4"
+}
 
 [node name="RayCast" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86864, 0 )
