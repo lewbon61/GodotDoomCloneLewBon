@@ -5,7 +5,7 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 
 var path = [] #hold the path coordinates from the enemy to the player
 var path_index = 0
-var speed = 5
+var speed = 50
 var health = 1000
 var move = true
 
@@ -21,7 +21,7 @@ func take_damage(dmg_amount):
 		move = false
 		$AnimatedSprite3D.play("hit")
 		yield($AnimatedSprite3D, "animation_finished")
-		$AnimatedSprite3D.play("walk")
+		#$AnimatedSprite3D.play("walk")
 		move = true
 	
 
@@ -36,6 +36,7 @@ func _physics_process(delta):
 			path_index += 1
 		else:
 			if move:
+				$AnimatedSprite3D.play("walk")
 				move_and_slide(direction.normalized() * speed, Vector3.UP)	
 		
 
@@ -49,7 +50,10 @@ func death():
 	set_physics_process(false)
 	$CollisionShape.disabled = true
 	yield($AnimatedSprite3D, "animation_finished")
-	$AnimatedSprite3D.play("die")
+	if health < 20:
+		$AnimatedSprite3D.play("explode")
+	else:
+		$AnimatedSprite3D.play("die")
 	
 	
 func shoot(target):
