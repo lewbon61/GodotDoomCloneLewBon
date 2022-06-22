@@ -16,8 +16,10 @@ onready var pistol = preload(\"res://Scenes/Pistol.tscn\")
 onready var shotgun = preload(\"res://Scenes/Shotgun.tscn\")
 onready var fire_blast = preload(\"res://Scenes/FireBlast.tscn\")
 onready var automaticbow = preload(\"res://Scenes/AutomaticBow.tscn\")
+onready var rocketlauncher = preload(\"res://Scenes/Rocketlauncher.tscn\")
+
 var current_gun = 0
-onready var carried_guns = [pistol,shotgun,fire_blast,automaticbow]
+onready var carried_guns = [pistol,shotgun,fire_blast,automaticbow,rocketlauncher]
 
 #Functions
 func _ready():

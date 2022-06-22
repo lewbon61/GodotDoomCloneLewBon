@@ -50,10 +50,7 @@ func death():
 	set_physics_process(false)
 	$CollisionShape.disabled = true
 	yield($AnimatedSprite3D, "animation_finished")
-	if health < 20:
-		$AnimatedSprite3D.play("explode")
-	else:
-		$AnimatedSprite3D.play("die")
+	$AnimatedSprite3D.play("die")
 	
 	
 func shoot(target):
