@@ -7,13 +7,14 @@ onready var rocket = preload("res://Scenes/Rocket.tscn")
 
 func launch_projectile():
 	var new_rocket = rocket.instance()
-	get_node("/root/world").add_child(new_rocket)
+	get_node("/root/World").add_child(new_rocket)
 	new_rocket.global_transform = spawn_location.global_transform
 
 func _process(delta):
-	if Input.is_action_pressed("shoot") and can_shoot:
+	if Input.is_action_pressed("shoot") and can_shoot and PlayerStats.ammo_rocket > 0:
 		gunsprite.play("shoot")
 		launch_projectile()
+		PlayerStats.change_rocket_ammo(-1)
 		can_shoot = false
 		yield(gunsprite,"animation_finished")
 		can_shoot = true

@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/AutomaticBow/dbowc0.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/AutomaticBow/dbowe0.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/AutomaticBow/dbowd0.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Gun.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/AutomaticBow.gd" type="Script" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
