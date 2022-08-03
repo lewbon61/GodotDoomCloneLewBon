@@ -13,7 +13,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="EnemyMonsterHead" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8082, 0.493402, -9.45714 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.8082, 0.493402, -9.45714 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.00680675, 0, -0.999977, 0, 1, 0, 0.999977, 0, 0.00680675, -9.50087, 0, -5.64865 )
