@@ -1,19 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/testroom.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Level1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/EnemyMonsterHead.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/HealthPickup.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/AmmoKit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Avatar.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Spatial"]
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 
-[node name="testroom" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 [node name="EnemyMonsterHead" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.8082, 0.493402, -9.45714 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5826, 1.30358, 5.6833 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.00680675, 0, -0.999977, 0, 1, 0, 0.999977, 0, 0.00680675, -9.50087, 0, -5.64865 )
+transform = Transform( 0.00680675, 0, -0.999977, 0, 1, 0, 0.999977, 0, 0.00680675, -115.828, 1.68061, -114.796 )
+
+[node name="Level1" parent="." instance=ExtResource( 2 )]
+
+[node name="HealthPickup" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 129.282, 1.87253, 6.63253 )
+
+[node name="AmmoKit" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 133.331, 1.76558, 4.336 )
+
+[node name="EnemyMonsterHead2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0583132, 0, -0.998298, 0, 1, 0, 0.998298, 0, 0.0583132, 37.0108, 1.13266, 7.7542 )
+
+[node name="Avatar" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -114.543, 0.933201, -93.9056 )

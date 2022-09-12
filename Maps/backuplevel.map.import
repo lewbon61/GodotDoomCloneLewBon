@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/backuplevel.map-9e469886378f508e4b9ef242a3b8e583.tres"
+
+[deps]
+
+source_file="res://Maps/backuplevel.map"
+dest_files=[ "res://.import/backuplevel.map-9e469886378f508e4b9ef242a3b8e583.tres" ]
+
+[params]
+

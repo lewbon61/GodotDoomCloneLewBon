@@ -6,8 +6,8 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 
 var path = [] #hold the path coordinates from the enemy to the player
 var path_index = 0
-var speed = 12
-var health = 1000
+var speed = 6
+var health = 20
 var move = true
 
 var searching = false

@@ -2,28 +2,30 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scfaces2.png-e26f6b8a280c5cf54510a379ddba6ef1.stex"
+path.s3tc="res://.import/scfaces2.png-e26f6b8a280c5cf54510a379ddba6ef1.s3tc.stex"
+path.etc2="res://.import/scfaces2.png-e26f6b8a280c5cf54510a379ddba6ef1.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Maps/textures/shadowcaster_TEXTURES/scfaces2.png"
-dest_files=[ "res://.import/scfaces2.png-e26f6b8a280c5cf54510a379ddba6ef1.stex" ]
+dest_files=[ "res://.import/scfaces2.png-e26f6b8a280c5cf54510a379ddba6ef1.s3tc.stex", "res://.import/scfaces2.png-e26f6b8a280c5cf54510a379ddba6ef1.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

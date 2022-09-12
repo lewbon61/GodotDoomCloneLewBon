@@ -1,0 +1,45 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Sprites/Avatar/afx4j0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Avatar/afx4d0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Avatar/afx4a0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Avatar/afx4k0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Avatar/afx4h0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Avatar/afx4m0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Avatar/afx4c0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Avatar/afx4e0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Avatar/afx4l0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Avatar/afx4b0.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Avatar/afx4i0.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/AvatarProjectile.gd" type="Script" id=12]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.245714
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "ball",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 11 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "explode",
+"speed": 5.0
+} ]
+
+[node name="AvatarProjectile" type="Area"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+frames = SubResource( 2 )
+animation = "ball"
+frame = 4
+playing = true
+
+[connection signal="body_entered" from="." to="." method="_on_AvatarProjectile_body_entered"]

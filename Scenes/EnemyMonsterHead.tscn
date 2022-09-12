@@ -18,6 +18,16 @@ radius = 0.5
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "hit",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "idle",
@@ -32,39 +42,29 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "hit",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "die",
-"speed": 5.0
 } ]
 
 [sub_resource type="CylinderShape" id=3]
-radius = 21.934
 height = 4.9758
+radius = 21.934
 
 [node name="EnemyMonsterHead" type="KinematicBody" groups=["Enemy"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.016746, 0 )
 script = ExtResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 3.96031, 0 )
+transform = Transform( 2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 1.8536, 0 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform( 4, 0, 0, 0, 8, 0, 0, 0, 4, -0.0228414, -0.113732, -0.0189123 )
+transform = Transform( 2, 0, 0, 0, 4, 0, 0, 0, 2, -0.0228414, -0.113732, -0.0189123 )
 centered = false
 offset = Vector2( -25, 0 )
 pixel_size = 0.0192
 billboard = 2
 frames = SubResource( 2 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 __meta__ = {
 "_editor_description_": "4"
