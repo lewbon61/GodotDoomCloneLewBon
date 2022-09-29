@@ -3,15 +3,15 @@ extends Node
  
  
 var health = 100
-var max_health = 200
+var max_health = 100
 var armor = 0
 var max_armor = 100
 var guns_carried = []
 var ammo_pistol = 50
-var ammo_rocket = 50
-var ammo_shells = 50
+var ammo_rocket = 0
+var ammo_shells = 15
 var ammo_plasma = 50
-var ammo_fireblast = 50
+var ammo_fireblast = 20
 var ammo_bow = 50
 var ammo_max_pistol = 200
 var ammo_max_rocket = 50
@@ -27,15 +27,15 @@ var current_gun = "Pistol"
  
 func reset():
 	var health = 100
-	var max_health = 200
+	var max_health = 100
 	var armor = 0
 	var max_armor = 100
 	var guns_carried = []
 	var ammo_pistol = 50
-	var ammo_rocket = 50
-	var ammo_shells = 50
+	var ammo_rocket = 0
+	var ammo_shells = 15
 	var ammo_plasma = 50
-	var ammo_fireblast = 50
+	var ammo_fireblast = 20
 	var ammo_bow = 50
 	var ammo_max_pistol = 200
 	var ammo_max_rocket = 50

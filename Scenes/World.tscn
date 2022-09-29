@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level1.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/HealthPickup.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/AmmoKit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Avatar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/BossEnemyMonsterHead.tscn" type="PackedScene" id=8]
 
 [node name="World" type="Spatial"]
 
@@ -16,7 +17,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5826, 1.30358, 5.6833 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.00680675, 0, -0.999977, 0, 1, 0, 0.999977, 0, 0.00680675, -115.828, 1.68061, -114.796 )
+transform = Transform( -0.00905811, 0, -0.999959, 0, 1, 0, 0.999959, 0, -0.00905811, 1.32468, 1.63217, 5.88507 )
 
 [node name="Level1" parent="." instance=ExtResource( 2 )]
 
@@ -31,3 +32,108 @@ transform = Transform( 0.0583132, 0, -0.998298, 0, 1, 0, 0.998298, 0, 0.0583132,
 
 [node name="Avatar" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -114.543, 0.933201, -93.9056 )
+
+[node name="HealthPickup2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 22.4938, 1.89386, -35.5319 )
+
+[node name="AmmoKit2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 23.0344, 2.02233, -38.5234 )
+
+[node name="AmmoKit3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -25.5689, 1.85156, -54.7521 )
+
+[node name="HealthPickup3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -26.4138, 2.0167, -61.0871 )
+
+[node name="HealthPickup4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 43.6797, 1.90716, -64.5544 )
+
+[node name="AmmoKit4" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -15.7558, 1.94099, -104.402 )
+
+[node name="HealthPickup5" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -17.7843, 2.28075, -105.593 )
+
+[node name="HealthPickup6" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -39.3782, 2.17123, -101.266 )
+
+[node name="AmmoKit5" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -42.2879, 1.97636, -100.826 )
+
+[node name="AmmoKit6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -89.6793, 1.88038, -120.758 )
+
+[node name="HealthPickup7" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -87.6035, 1.89097, -120.498 )
+
+[node name="AmmoKit7" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 43.1035, 2.05195, -51.3396 )
+
+[node name="BossEnemyMonsterHead" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 18.9874, 1.04686, -57.5001 )
+
+[node name="EnemyMonsterHead3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9835, 1.04391, 16.0748 )
+
+[node name="EnemyMonsterHead4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.1299, 1.04, 13.3018 )
+
+[node name="EnemyMonsterHead5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.9838, 1.04, 23.0187 )
+
+[node name="EnemyMonsterHead6" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.8102, 1.04025, 27.7342 )
+
+[node name="EnemyMonsterHead7" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87.2622, 1.04, 12.1632 )
+
+[node name="EnemyMonsterHead8" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139.312, 1.04316, 20.8956 )
+
+[node name="EnemyMonsterHead9" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.6346, 1.04128, -17.4678 )
+
+[node name="EnemyMonsterHead10" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96.2436, 1.04541, -11.6813 )
+
+[node name="EnemyMonsterHead11" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69.2524, 1.04129, -29.752 )
+
+[node name="EnemyMonsterHead12" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4558, 1.04, -23.2917 )
+
+[node name="EnemyMonsterHead13" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6238, 1.04, -32.201 )
+
+[node name="EnemyMonsterHead14" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6821, 1.04292, -37.8586 )
+
+[node name="EnemyMonsterHead15" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.8184, 1.04, -39.8831 )
+
+[node name="EnemyMonsterHead16" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.8475, 1.04, -33.5841 )
+
+[node name="EnemyMonsterHead17" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.214495, 1.04029, -17.3403 )
+
+[node name="EnemyMonsterHead18" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0369701, 1.04032, -30.6564 )
+
+[node name="EnemyMonsterHead19" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.849, 1.04229, -29.8501 )
+
+[node name="EnemyMonsterHead20" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8017, 1.04134, -18.1057 )
+
+[node name="EnemyMonsterHead21" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.6753, 1.04413, -18.7434 )
+
+[node name="EnemyMonsterHead22" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6657, 1.04, -19.9381 )
+
+[node name="EnemyMonsterHead23" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.498, 1.04381, -18.4655 )
+
+[node name="EnemyMonsterHead24" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.7127, 1.04285, -22.9344 )

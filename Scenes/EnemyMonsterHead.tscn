@@ -53,11 +53,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.016746, 0 )
 script = ExtResource( 12 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 1.8536, 0 )
+transform = Transform( 2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 1.96452, 0 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform( 2, 0, 0, 0, 4, 0, 0, 0, 2, -0.0228414, -0.113732, -0.0189123 )
+transform = Transform( 2, 0, 0, 0, 4, 0, 0, 0, 2, 0.155906, -0.0243579, -0.0189123 )
 centered = false
 offset = Vector2( -25, 0 )
 pixel_size = 0.0192

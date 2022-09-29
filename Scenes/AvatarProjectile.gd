@@ -20,7 +20,7 @@ func _process(delta):
 
 
 func _on_AvatarProjectile_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Enemy"):
 		return
 	set_process(false)
 	$AnimatedSprite3D.play("explode")

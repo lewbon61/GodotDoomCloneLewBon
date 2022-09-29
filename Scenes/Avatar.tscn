@@ -50,7 +50,7 @@ animations = [ {
 
 [sub_resource type="CylinderShape" id=3]
 height = 4.1687
-radius = 18.0656
+radius = 34.6895
 
 [node name="Avatar" type="KinematicBody" groups=["Enemy"]]
 script = ExtResource( 15 )

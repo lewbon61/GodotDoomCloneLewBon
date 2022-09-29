@@ -7,14 +7,14 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 var path = [] #hold the path coordinates from the enemy to the player
 var path_index = 0
 var speed = 6
-var health = 20
+var health = 43.69
 var move = true
 
 var searching = false
 var shooting = false
 var dead = false
 
-var damage = 8
+var damage = 30
 
 onready var ray = $Visual
 
@@ -26,12 +26,12 @@ func take_damage(dmg_amount):
 	if health <= 0:
 		death()
 		return
-	#else:
-	#	move = false
-	#	$AnimatedSprite3D.play("hit")
-	#	yield($AnimatedSprite3D, "animation_finished")
-	#	#$AnimatedSprite3D.play("walk")
-	#	move = true
+	else:
+		move = false
+		$AnimatedSprite3D.play("hit")
+		yield($AnimatedSprite3D, "animation_finished")
+		$AnimatedSprite3D.play("walk")
+		move = true
 	
 
 
@@ -60,7 +60,7 @@ func look_at_player():
 	if ray.is_colliding():
 		if ray.get_collider().is_in_group("Player"):
 			searching = true
-			print("I see you")
+			
 			
 		else:
 			searching = false
@@ -102,7 +102,7 @@ func _on_Timer_timeout():
 
 func _on_Aural_body_entered(body):
 	if body.is_in_group("Player"):
-		print("I hear you")
+		
 		searching = true
 
 
