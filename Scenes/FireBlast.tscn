@@ -46,9 +46,4 @@ centered = false
 flip_h = true
 flip_v = true
 
-[node name="GunRays" type="Spatial" parent="."]
-
-[node name="RayCast" type="RayCast" parent="GunRays"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
-enabled = true
-cast_to = Vector3( 0, 0, -20 )
+[node name="Position3D" type="Position3D" parent="."]

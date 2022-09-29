@@ -1,0 +1,39 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/Fireball.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/MonsterHead/balhh0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/MonsterHead/balhi0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/MonsterHead/balha0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/MonsterHead/balhd0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/MonsterHead/balhf0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/MonsterHead/balhe0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/MonsterHead/balhc0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/MonsterHead/balhb0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/MonsterHead/balhg0.png" type="Texture" id=10]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "explode",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "fireball",
+"speed": 5.0
+} ]
+
+[node name="Fireball" type="Area"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+frames = SubResource( 2 )
+animation = "fireball"
+
+[connection signal="body_entered" from="." to="." method="_on_Fireball_body_entered"]
