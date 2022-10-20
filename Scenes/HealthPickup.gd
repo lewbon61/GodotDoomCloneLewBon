@@ -1,5 +1,5 @@
 extends Area
-export (int) var health_var =20
+export (int) var health_var =30
 
 # Declare member variables here. Examples:
 # var a = 2

@@ -7,14 +7,14 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 var path = [] #hold the path coordinates from the enemy to the player
 var path_index = 0
 var speed = 6
-var health = 43.69
+var health = 30
 var move = true
 
 var searching = false
 var shooting = false
 var dead = false
 
-var damage = 30
+var damage = 20
 
 onready var ray = $Visual
 

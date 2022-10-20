@@ -3,13 +3,13 @@ extends KinematicBody
 onready var nav = get_tree().get_nodes_in_group("NavMesh")[0]
 onready var player = get_tree().get_nodes_in_group("Player")[0]
 
-onready var spawn_location = $Position3D
-onready var projectile = preload("res://Scenes/AvatarProjectile.tscn")
+
+
 
 
 var path = [] #hold the path coordinates from the enemy to the player
 var path_index = 0
-var speed = 3
+var speed = 10
 var health = 1000
 var move = true
 
@@ -17,6 +17,7 @@ var searching = false
 var shooting = false
 var dead = false
 
+var damage = 35
 
 onready var ray = $Visual
 
@@ -93,9 +94,7 @@ func shoot():
 		yield($AnimatedSprite3D,"frame_changed")
 		if ray.is_colliding():
 			if ray.get_collider().is_in_group("Player"):
-				var new_projectile = projectile.instance()
-				get_node("/root/World").add_child(new_projectile)
-				new_projectile.global_transform = spawn_location.global_transform
+				PlayerStats.change_health(-damage)
 		yield($AnimatedSprite3D,"animation_finished")
 		shooting = false
 

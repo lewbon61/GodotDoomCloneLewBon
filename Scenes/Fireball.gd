@@ -1,7 +1,7 @@
 extends Area
 
 var fireball_speed = 15
-var fireball_damage = 5
+var fireball_damage = 15
 
 
 func deal_damage():

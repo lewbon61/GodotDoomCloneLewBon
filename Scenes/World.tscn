@@ -8,7 +8,7 @@
 [ext_resource path="res://Scenes/AmmoKit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Avatar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/BossEnemyMonsterHead.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/EnemyCultist.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/EnemyCult.tscn" type="PackedScene" id=9]
 
 [node name="World" type="Spatial"]
 
@@ -18,7 +18,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5826, 1.30358, 5.6833 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.00164071, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.00164071, 32.366, 1.53227, -90.3955 )
+transform = Transform( 0.174232, 0, 0.984705, 0, 1, 0, -0.984705, 0, 0.174232, -81.2797, 1.14249, -102.403 )
 
 [node name="Level1" parent="." instance=ExtResource( 2 )]
 
@@ -30,9 +30,6 @@ transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 133.331, 1.76558, 4.336 )
 
 [node name="EnemyMonsterHead2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.0583132, 0, -0.998298, 0, 1, 0, 0.998298, 0, 0.0583132, 37.0108, 1.13266, 7.7542 )
-
-[node name="Avatar" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -114.543, 0.933201, -93.9056 )
 
 [node name="HealthPickup2" parent="." instance=ExtResource( 5 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 22.4938, 1.89386, -35.5319 )
@@ -139,5 +136,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.498, 1.04381, -18.4655 )
 [node name="EnemyMonsterHead24" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.7127, 1.04285, -22.9344 )
 
-[node name="EnemyCultist" parent="." instance=ExtResource( 9 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 3.72954, 1.04045, -88.0525 )
+[node name="EnemyCult" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92412, 1.04233, -87.6323 )
+
+[node name="BossEnemyAvatar" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -125.907, 1.04, -110.152 )

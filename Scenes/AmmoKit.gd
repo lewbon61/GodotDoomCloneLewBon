@@ -1,5 +1,5 @@
 extends Area
-export (int) var ammo_var = 5
+export (int) var ammo_var = 10
 
 # Declare member variables here. Examples:
 # var a = 2

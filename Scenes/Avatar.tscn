@@ -50,9 +50,9 @@ animations = [ {
 
 [sub_resource type="CylinderShape" id=3]
 height = 4.1687
-radius = 34.6895
+radius = 25.6272
 
-[node name="Avatar" type="KinematicBody" groups=["Enemy"]]
+[node name="BossEnemyAvatar" type="KinematicBody" groups=["Enemy"]]
 script = ExtResource( 15 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -85,9 +85,6 @@ shape = SubResource( 3 )
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
-
-[node name="Position3D" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28171, 0 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Aural" to="." method="_on_Arual_body_entered"]

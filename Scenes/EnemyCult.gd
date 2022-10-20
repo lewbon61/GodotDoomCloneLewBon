@@ -3,10 +3,11 @@ extends KinematicBody
 onready var nav = get_tree().get_nodes_in_group("NavMesh")[0]
 onready var player = get_tree().get_nodes_in_group("Player")[0]
 
+
 var path = [] #hold the path coordinates from the enemy to the player
 var path_index = 0
 var speed = 6
-var health = 53.69
+var health = 60
 var move = true
 
 var searching = false
@@ -95,17 +96,17 @@ func shoot():
 		shooting = false
 
 
-func _on_ShootTimer_timeout():
-	shoot()
+func _on_Timer_timeout():
+	find_path(player.global_transform.origin)
 
 
-
-func _on_Arual_body_entered(body):
+func _on_Aural_body_entered(body):
 	if body.is_in_group("Player"):
 		
 		searching = true
 
-func _on_Timer_timeout():
-	find_path(player.global_transform.origin)
+
+func _on_ShootTimer_timeout():
+	shoot()
 
 

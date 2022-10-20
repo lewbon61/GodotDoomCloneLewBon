@@ -85,7 +85,7 @@ func death():
 	
 	
 func shoot():
-	if searching and not dead and not hitting and can_hit:
+	if searching and not dead and not hitting:
 		$AnimatedSprite3D.play("shoot")
 		hitting = true
 		yield($AnimatedSprite3D,"frame_changed")
@@ -112,6 +112,7 @@ func _on_Aural_body_entered(body):
 func _on_ShootTimer_timeout():
 	if can_hit:
 		shoot()
+
 
 
 
