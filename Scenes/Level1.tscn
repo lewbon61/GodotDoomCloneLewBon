@@ -1,4 +1,4 @@
-[gd_scene load_steps=580 format=2]
+[gd_scene load_steps=581 format=2]
 
 [ext_resource path="res://addons/qodot/src/nodes/qodot_map.gd" type="Script" id=1]
 [ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=2]
@@ -42,6 +42,7 @@
 [ext_resource path="res://Maps/textures/ogro_patches/org03b.png" type="Texture" id=40]
 [ext_resource path="res://Maps/textures/ogro_patches/conc6.png" type="Texture" id=41]
 [ext_resource path="res://Maps/textures/shadowcaster_FLATS/scwoods1.png" type="Texture" id=42]
+[ext_resource path="res://Scenes/Door4.gd" type="Script" id=43]
 
 [sub_resource type="SpatialMaterial" id=9]
 albedo_texture = ExtResource( 30 )
@@ -2527,6 +2528,7 @@ anims/RESET = SubResource( 530 )
 
 [node name="Door4" type="StaticBody" parent="." groups=["Door"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 4, -116 )
+script = ExtResource( 43 )
 
 [node name="entity_4_mesh_instance" type="MeshInstance" parent="Door4"]
 mesh = SubResource( 19 )

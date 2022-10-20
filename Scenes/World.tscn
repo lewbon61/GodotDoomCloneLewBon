@@ -18,7 +18,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5826, 1.30358, 5.6833 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.174232, 0, 0.984705, 0, 1, 0, -0.984705, 0, 0.174232, -81.2797, 1.14249, -102.403 )
+transform = Transform( 0.129332, 0, -0.991602, 0, 1, 0, 0.991602, 0, 0.129332, 0.104992, 1.14249, 7.88017 )
 
 [node name="Level1" parent="." instance=ExtResource( 2 )]
 
